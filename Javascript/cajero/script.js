@@ -1,8 +1,5 @@
-let imagen = document.getElementById("imagen");
-let dinero = 0;
-let papeles = 0;
-let div = 0;
-let entregado = [];
+let imagen  = document.getElementById("imagen");
+let mostrar = document.getElementById("mostrar");
 
 class Billete {
 
@@ -17,16 +14,11 @@ let caja = [];
     caja.push(new Billete( 50 , 3 ));
     caja.push(new Billete( 20 , 2 ));
     caja.push(new Billete( 10 , 2 ));
-
-    
-    
-    imagen.addEventListener("click", retirar);
-    
+        
     function retirar(){
         
         let valorUser = document.getElementById("cajeroInput");
-        dinero = parseInt(valorUser.value);
-        console.log(dinero);    
+            dinero = parseInt(valorUser.value); 
 
         for( let b of caja ){
 
@@ -44,13 +36,34 @@ let caja = [];
                 entregado.push(new Billete( b.valor , papeles ));
                 dinero = dinero - ( b.valor * papeles );
 
-                console.log("weas "+ dinero)
                 //console.log( b.valor )
 
             } 
             
-            
         }
-    console.log(entregado)
 
-}
+        if( dinero > 0 ){
+            mostrar.innerHTML = "No llego pa tanto compa";
+        }
+        else{
+            
+            for( let e of entregado ){
+
+                if( e.cantidad > 0 ){
+                    
+                    mostrar.innerHTML += e.cantidad + " billetes de $" + e.valor + "</br>";
+
+                }
+                
+            }
+                
+        }
+    }
+
+let dinero  = 0;
+let papeles = 0;
+let div     = 0;
+let entregado = [];
+    
+imagen.addEventListener("click", retirar);
+
