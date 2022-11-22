@@ -51,6 +51,7 @@ let caja = [];
 
                 if( e.cantidad > 0 ){
                     
+                    // Mostrar en imgs
                     mostrar.innerHTML += e.cantidad + " billetes de $" + e.valor + "</br>";
 
                 }
