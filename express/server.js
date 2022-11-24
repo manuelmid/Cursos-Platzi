@@ -4,7 +4,7 @@ let app = express();
 app.get( '/' , inicio);
 
 function inicio(peticion , resultado){
-    resultado.setEncoding('Hello world!!');
-} 
+    resultado.send("<strong>Home olala</strong>");
+};
 
-app.listen(8989);
+app.listen(8080);
