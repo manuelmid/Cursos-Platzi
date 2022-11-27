@@ -1,6 +1,7 @@
 int amarillo = 13;
 int rojo = 11;
 int miliSegundos = 500;
+int esperar = 1000;
 
 void setup(){
 
