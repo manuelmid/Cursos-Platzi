@@ -48,3 +48,9 @@ function anoClick() {
 ano.value;
 console.log(ano);
 console.log("Aqui estoy :D");
+
+ano.addEventListener("click", hablar)
+
+function hablar(){
+        console.log("ai");
+}
