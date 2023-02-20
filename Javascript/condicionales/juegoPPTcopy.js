@@ -1,6 +1,7 @@
 var elements = ['piedra','papel','tijera'];
 var user = document.getElementById('cars');
 var pc = document.getElementById('carsPc');
+var boton = document.getElementById("boton")
 
 function jugar(){
 
