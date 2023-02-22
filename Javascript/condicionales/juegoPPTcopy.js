@@ -28,6 +28,8 @@ function jugar(){
         case pcV == elements[2] && userV == elements[1]:
             console.log("La computadora gana con " + elements[2])
             break;
+            default:
+                return "nada de nada"
     
     }
 
