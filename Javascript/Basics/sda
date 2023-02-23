@@ -1,0 +1,19 @@
+docker run --name ajila-cloud-author-6.4.8.2 \
+-e "AJILA_CLOUD=true" \
+-e "AEM_START_OPTS=start -c /aem/crx-quickstart -i launchpad -p 4502 -a 0.0.0.0 -Dsling.properties=conf/sling.properties" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,local" \
+-v "\Users\$USER\docker\ajila-cloud-author-6.4.8.2\crx-quickstart:\aem\crx-quickstart" \
+-p 4502:4502 -d \
+-p 8000:8000 -d \
+-p 8080:8080 -d \
+ajila.azurecr.io/aemforms:6.4.8.2
+
+docker run --name ajila-cloud-author-6.4.8.2 ^
+-e "AJILA_CLOUD=true" ^
+-e "AEM_START_OPTS=start -c /aem/crx-quickstart -i launchpad -p 4502 -a 0.0.0.0 -Dsling.properties=conf/sling.properties" ^
+-e "AEM_RUNMODE=-Dsling.run.modes=author,local" ^
+-v "/Usuarios/%USERNAME%/docker/ajila-cloud-author-6.4.8.2/crx-quickstart:/aem/crx-quickstart" ^
+-p 4502:4502 -d ^
+-p 8000:8000 -d ^
+-p 8080:8080 -d ^
+ajila.azurecr.io/aemforms:6.4.8.2
