@@ -22,7 +22,11 @@ var articulos = [
     { nombre: "Audifonos", costo: 1700 },
   ]
 
-  //.find 
+  //.find     //.filter
+  
+      //Find: Retorna solo la primera coincidencia.
+      //Filter: Retorna todas las coincidencias.
+      
 /*   Utilicemos el array articulos que definimos para encontrar algún artículo que su nombre sea Laptop.
   Entonces utilizamos el método find que retorne la condición que necesitamos. 
   Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array. */
@@ -57,3 +61,6 @@ var algunArticulo = articulos.find(function (articulo) {
         return articulo.costo <= 700
       })
       console.log(existeArticulo) // true
+
+      //Find: Retorna solo la primera coincidencia.
+      //Filter: Retorna todas las coincidencias.
