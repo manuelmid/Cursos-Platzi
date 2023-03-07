@@ -64,3 +64,6 @@ var algunArticulo = articulos.find(function (articulo) {
 
       //Find: Retorna solo la primera coincidencia.
       //Filter: Retorna todas las coincidencias.
+
+      var artiFiltrados = articulos.filter()
+      console.log(artiFiltrados)
